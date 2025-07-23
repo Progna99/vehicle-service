@@ -30,8 +30,9 @@ jobs:
           push: true
           platforms: linux/arm64
           tags: |
-            ghcr.io/${{ github.repository }}:latest
-            ghcr.io/${{ github.repository }}:${{ github.sha }}
+            ghcr.io/${{ github.repository_owner }}/vehicle-service:latest
+            ghcr.io/${{ github.repository_owner }}/vehicle-service:${{ github.sha }}
+
 
       - name: Logout from Docker
         if: always()
